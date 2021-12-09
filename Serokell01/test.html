@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Task</title>
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="stylesheet" href="Assets/css/serokell.css">
+</head>
+<body>
+
+    <section class="header position-fixed">
+        <header class="container header__container flex flex__space-between flex__align-center">
+            <div>
+                <a href="#" class="header__logo">
+                    <img src="Assets/images/logo.svg" class="mw-100" alt="logo" />
+                </a>
+            </div>
+            <div>
+                <nav class="header__nav">
+                    <div class="header__nav--wrapper">
+                        <ul class="header__nav--list">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="hide__lg">
+                <ul class="header__bars" onclick="toggleBody('sidemenu-open');">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <section class="title">
+        <div class="container title__container h-100 flex flex__align-center text-center">
+            <div class="flex__auto position-relative">
+                <h1 class="title__title">Project Title</h1>
+                <div class="title__button position-absolute">
+                    <a href="#contact" class="title__button--link btn btn-md btn-black-outline font__weight--600">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main overflow-hidden padding__top-5 margin__bottom-5">
+        <h2 class="main__title text-center margin__bottom-5">Subtitle</h2>
+
+        <div class="m-container margin__bottom-5">
+            <div class="flex flex__gap-100 flex__align-center">
+                <div class="flex--1">
+                    <div class="w-100">
+                        <img src="Assets/images/960_500.jpg" class="mw-100 overdiv__lg--20" alt="dog" />
+                    </div>
+                </div>
+                <div class="flex--1">
+                    <div class="main__text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container main__container ">
+            <div class="flex flex__gap-100 flex__align-center flex__notlg--reorder">
+                <div class="flex--1">
+                    <p class="main__text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..
+                    </p>
+                </div>
+                <div class="flex--1">
+                    <img src="Assets/images/960_960.jpg" class="mw-100" alt="dog" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact__container h-100 flex flex__align-center text-center">
+            <div class="flex__auto position-relative">
+                <h1 class="contact__title position-absolute">Contact Form</h1>
+                <form id="contact-form" action="/" onsubmit="return submitContactForm();" class="contact__form border__black--1 mx-auto">
+                    <div class="form-group margin__bottom-4">
+                        <input type="text" class="form-control" name="name" placeholder="Name" maxlength="50" required />
+                    </div>
+                    <div class="form-group margin__bottom-4">
+                        <input type="email" class="form-control" name="email" placeholder="Email" maxlength="50" required />
+                    </div>
+                    <div class="form-group margin__bottom-4">
+                        <textarea class="form-control" rows="8" name="message" placeholder="Message" maxlength="1000" required></textarea>
+                    </div>
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-md btn-black-outline font__weight--600">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer text-white">
+        <footer class="container footer__container">
+            <div class="flex flex__gap-20 flex__space-between">
+                <div class="flex__auto">
+                    <ul class="footer__ul">
+                        <li>
+                            <a href="#" class="footer__link">
+                                <span class="footer__link--icon">
+                                    <i class="icon-02-marker"></i>
+                                </span>
+                                <span class="footer__link--text">Address</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+905308238318" class="footer__link">
+                                <span class="footer__link--icon">
+                                    <i class="icon-03-phone"></i>
+                                </span>
+                                <span class="footer__link--text">Phone</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:psdxweb@gmail.com" class="footer__link">
+                                <span class="footer__link--icon">
+                                    <i class="icon-01-envelope"></i>
+                                </span>
+                                <span class="footer__link--text">Email</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="footer__ul">
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 1</span></a></li>
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 2</span></a></li>
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 3</span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="footer__ul">
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 1</span></a></li>
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 2</span></a></li>
+                        <li><a href="#" class="footer__link"><span class="footer__link--text">Link 3</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer__copyright text-center margin__x-lg-4">
+            © Copyright
+        </div>
+    </section>
+
+    <script src="Assets/js/main.js"></script>
+</body>
+</html>
